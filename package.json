@@ -1,7 +1,7 @@
 {
   "name": "blagoblag",
   "version": "1.0.0",
-  "description": "",
+  "description": "## The personal website and blag of Kyle",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +12,7 @@
     "go": "npm run build && npm run start",
     "lint": "eslint client server || true"
   },
-  "author": "",
+  "author": "Kyle",
   "license": "ISC",
   "dependencies": {
     "babel-core": "^6.7.4",
@@ -51,5 +51,17 @@
   },
   "engines": {
     "node": "0.12.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EnemyofZeus/blagoblag.git"
+  },
+  "keywords": [
+    "blag",
+    "blog"
+  ],
+  "bugs": {
+    "url": "https://github.com/EnemyofZeus/blagoblag/issues"
+  },
+  "homepage": "https://github.com/EnemyofZeus/blagoblag#readme"
 }
