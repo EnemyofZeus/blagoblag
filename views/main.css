@@ -1,0 +1,42 @@
+body{
+  margin: 0 0 0 0;
+  background-color: #ccebff;
+}
+.homeBody{
+  height:100vw;
+
+}
+.navbar {
+  background-color: #ccebff;
+  height:7vh;
+  width:100vw;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  
+
+}
+.spacer {
+  height:7vh;
+}
+a {
+  height: inherit;
+}
+.home {
+  height: inherit;
+  align-self: flex-start;
+  margin-left: 2em;
+}
+.aboutMe {
+  height: inherit;
+  margin-left: auto;
+  margin-right: 2em;
+}
+
+.navBtn{
+  background-color: #99d6ff;
+  height:inherit;
+  width:5em;
+  font-size: 16px;
+
+}

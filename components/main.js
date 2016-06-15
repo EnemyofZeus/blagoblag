@@ -1,16 +1,13 @@
 var React = require('react');
 var Link = require('react-router').Link;
 
+var NavMenu = require('./navMenu.js');
+//var Drawer = require('./drawer.js');
 var Main = React.createClass({
   render: function(){
     return (
       <div>
-        <Link to='/'>
-          <h2>Home</h2>
-        </Link>
-        <Link to='about'>
-          <h2>About</h2>
-        </Link>
+        <NavMenu />
         {this.props.children}
 
       </div>
