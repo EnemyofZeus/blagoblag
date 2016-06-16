@@ -10,7 +10,8 @@ var Main = require('./../main.js'),
     Home = require('./../home.js'),
     About = require('./../about.js'),
     Contact = require('./../contact.js'),
-    Projects = require('./../projects.js');
+    Projects = require('./../projects.js'),
+    Blog = require('./../blog.js');
 
 ReactDom.render(
   <Router history = {hashHistory}>
@@ -19,7 +20,7 @@ ReactDom.render(
       <Route path = '/about' component={About} />
       <Route path = '/contact' component={Contact} />
       <Route path = '/projects' component={Projects} />
-
+      <Route path = '/blog' component={Blog} />
     </Route>
   </Router>,
   document.getElementById('app')

@@ -3,12 +3,21 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose');
 
+var blogControl = require('./controllers/blogControl.js');
 var app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(express.static(__dirname+'/views'));
+
+app.post('/blog', blogControl.create);
+app.get('/blog', blogControl.read);
+app.get('/blog/:id', blogControl.readById);
+app.put('/blog/:id', blogControl.update);
+app.delete('/blog/:id', blogControl.delete);
+
+
 
 if (process.env.NODE_ENV === 'production') {
   console.log('Running in production mode');
