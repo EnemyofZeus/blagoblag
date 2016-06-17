@@ -6,15 +6,17 @@ var Blog = React.createClass({
     return {showForm: false}
   },
   newPost: function(){
-    {this.setState.showForm=true};
+    if(this.state.showForm){
+      this.setState({showForm:false});
+    } else{
+      this.setState({showForm:true});
+    }
   },
-
   render: function(){
     return(
       <div>
         <h1>Here is where the actual blogging will occur.</h1>
         <h2 onClick={this.newPost}>Because seriously, why would I put this on the front page</h2>
-        <NewBlogPost />
         {this.state.showForm ? <NewBlogPost /> : null}
       </div>
     )
