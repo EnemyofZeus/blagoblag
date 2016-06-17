@@ -48,8 +48,8 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-mongoose.connect( "mongodb://localhost:27017blagoblag"
-  //config.mongo_uri
+mongoose.connect( //"mongodb://localhost:27017blagoblag"
+  config.mongo_uri
 );
 mongoose.connection.once('open', function(){
   console.log('Connected to your database.');
