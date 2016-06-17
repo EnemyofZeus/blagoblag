@@ -1,12 +1,13 @@
 var express = require('express'),
-    cors = require('cors'),
+    // cors = require('cors'),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose');
 
+var config = require('./config.js');
 var blogControl = require('./controllers/blogControl.js');
 var app = express();
 
-app.use(cors());
+// app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(express.static(__dirname+'/views'));
@@ -47,11 +48,13 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-mongoose.connect("mongodb://localhost:27017blagoblag");
+mongoose.connect( //"mongodb://localhost:27017blagoblag"
+  config.mongo_uri
+);
 mongoose.connection.once('open', function(){
   console.log('Connected to your database.');
 });
 
-app.listen(9090, function(){
-  console.log("The blagoblag is hot on 9090");
+app.listen(config.port, function(){
+  console.log("The blagoblag is hot on port " + config.port);
 });
